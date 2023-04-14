@@ -31,7 +31,7 @@ html {
   -webkit-tap-highlight-color: transparents;
 }
 body {
-  display: grid;
+  /* display: grid; */
   overflow-x: hidden;
 }
 .wrapper,
@@ -44,6 +44,8 @@ body {
   position: relative;
   background-color: var(--white);
   padding: 2rem 1rem;
+  overflow-x: clip;
+  overflow-clip-margin: 20rem;
 }
 .main-header .wrapper {
   display: flex;
@@ -179,7 +181,7 @@ h1 {
 }
 /* url */
 .url-shortening {
-  width: clamp(100%, 75rem, calc(100% - 2rem));
+  width: calc(100% - 2rem);
   position: absolute;
   top: calc(100% - 4.124rem);
   left: 50%;
@@ -343,7 +345,7 @@ footer .logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
 }
 footer h4 {
   color: var(--white);
@@ -393,7 +395,7 @@ footer a:is(:hover, :focus) {
   font-size: 0.875rem;
   color: var(--white);
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
   .main-header .wrapper {
     justify-content: left;
     gap: 2rem;
@@ -442,9 +444,6 @@ footer a:is(:hover, :focus) {
     padding-bottom: 6rem;
   }
   .ilustration {
-    box-sizing: content-box;
-    padding-right: 10rem;
-    margin-right: -10rem;
     background-size: contain;
     height: 50vh;
   }
@@ -533,15 +532,26 @@ footer a:is(:hover, :focus) {
   footer .wrapper {
     display: flex;
     align-items: start;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 2rem;
+  }
+  footer .logo {
+    display: none;
   }
   .footer-nav {
     text-align: left;
     display: flex;
-    width: 60%;
     align-items: start;
     justify-content: space-between;
     flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  footer .logo {
+    display: block;
+  }
+  footer .wrapper {
+    justify-content: space-evenly;
   }
 }
