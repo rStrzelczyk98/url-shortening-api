@@ -349,7 +349,7 @@ footer .logo {
   align-items: center;
   gap: 4rem;
 }
-footer h4 {
+footer h3 {
   color: var(--white);
   margin-bottom: 1.5rem;
 }
