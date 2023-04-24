@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [url-shortening](https://rstrzelczyk98.github.io/url-shortening-api/)
+- Live Site URL: [Shortly](https://rstrzelczyk98.github.io/url-shortening-api/)
 
 ## Built with
 
